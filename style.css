@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(-8rem);
+    opacity: 0.2;
+  }
+  12.5% {
+    transform: translateX(-7rem);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateX(-6rem);
+    opacity: 0.4;
+  }
+  37.5% {
+    transform: translateX(-5rem);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-4rem);
+    opacity: 0.6;
+  }
+  62.5% {
+    transform: translateX(-3rem);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateX(-2rem);
+    opacity: 0.8;
+  }
+  87.5% {
+    transform: translateX(-1rem);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+#to-do--input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+  padding: 2rem;
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 33%;
+  transition: all 0.2s;
+}
+
+#input {
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 15px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#input:focus {
+  outline: none;
+  border: 0.6mm solid black;
+}
+
+.btn-add {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: white;
+  padding: 12px;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.horizontal,
+.vertical {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.vertical {
+  position: relative;
+  bottom: 3px;
+  transform: rotate(90deg);
+}
+
+.btn-add:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+#todo-list {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+}
+
+li {
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  list-style-type: none;
+  font-family: "Prompt", sans-serif;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 33%;
+  transition: all 0.2s;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 25px;
+}
+
+li:hover {
+  background-color: rgb(30, 30, 30);
+  color: grey;
+  text-decoration: line-through;
+}
+
+.li-checked {
+  background-color: rgb(48, 48, 48) !important;
+  color: grey;
+  text-decoration: line-through;
+}
+
+.li-default {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.disappear {
+  transform: translateX(8rem);
+  opacity: 0;
+}
+
+span {
+  border-top: 1px solid rgb(214, 214, 214);
+  color: rgb(153, 153, 153);
+  font-size: 0.8rem;
+  margin-top: 8px;
+  padding: 0.4rem;
+  text-align: right;
+  text-decoration: none !important;
+}
+
+i {
+  margin-right: 5px;
+  transition: all 0.2s;
+}
+
+i:hover {
+  transform: scale(1.5);
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 992px) {
+  #to-do--input-area {
+    width: 70%;
+    transition: all 0.2s;
+  }
+  li {
+    width: 70%;
+    transition: all 0.2s;
+  }
+}
+
+@media screen and (max-width: 662px) {
+  #to-do--input-area {
+    width: 100%;
+    transition: all 0.2s;
+  }
+  li {
+    width: 100%;
+    transition: all 0.2s;
+  }
+}
