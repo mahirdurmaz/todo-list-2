@@ -13,8 +13,8 @@ body {
 
 @keyframes appear {
   0% {
-    transform: translateX(-8rem);
-    opacity: 0.2;
+    transform: translateX(-6rem);
+    opacity: 0;
   }
   100% {
     transform: translateX(0rem);
