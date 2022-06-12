@@ -16,34 +16,6 @@ body {
     transform: translateX(-8rem);
     opacity: 0.2;
   }
-  12.5% {
-    transform: translateX(-7rem);
-    opacity: 0.3;
-  }
-  25% {
-    transform: translateX(-6rem);
-    opacity: 0.4;
-  }
-  37.5% {
-    transform: translateX(-5rem);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateX(-4rem);
-    opacity: 0.6;
-  }
-  62.5% {
-    transform: translateX(-3rem);
-    opacity: 0.7;
-  }
-  75% {
-    transform: translateX(-2rem);
-    opacity: 0.8;
-  }
-  87.5% {
-    transform: translateX(-1rem);
-    opacity: 0.9;
-  }
   100% {
     transform: translateX(0rem);
     opacity: 1;
